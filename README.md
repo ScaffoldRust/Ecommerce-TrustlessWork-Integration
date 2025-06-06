@@ -6,7 +6,6 @@ A modern e-commerce template powered by ScaffoldRust, featuring seamless integra
 
 - **TrustlessWork Integration**: Secure, milestone-based payments with zero custodians
 - **E-commerce Essentials**: Product management, cart system, and order processing
-- **AI Automation**: Smart order management and customer support
 - **Passkey Authentication**: Secure, passwordless authentication
 - **Rust & Soroban Smart Contracts**: Scalable payment processing on Stellar
 - **Next.js 14** with App Router for modern web development
