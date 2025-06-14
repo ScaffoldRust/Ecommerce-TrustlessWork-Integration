@@ -2,6 +2,7 @@ import CTASection from "@/components/home/cta-section";
 import Header from "@/components/header";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import HeroSection from "@/components/home/hero-section";
 
 const OldLayout = () => {
   return (
@@ -54,6 +55,7 @@ export default function Home() {
   return (
     <div className="h-full">
       <Header />
+      <HeroSection />
       <CTASection />
     </div>
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
