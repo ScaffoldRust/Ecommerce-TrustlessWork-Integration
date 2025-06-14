@@ -8,18 +8,17 @@ import {
 } from "lucide-react";
 import React from "react";
 import WhyChoseCard from "../Common/WhyChoseCard";
+import SectionHeading from "../Common/SectionHeading";
 
 const WhyChose = () => {
   return (
     <div className="p-20">
-      <div className="text-center gap-4 flex flex-col mb-20 max-w-4xl mx-auto">
-        <h2 className="text-4xl">Why Choose TrustCommerce?</h2>
-        <p className="text-gray-600 font-light">
-          Built with Trustless Work integration, our template provides
-          everything you need for secure, escrow-protected e-commerce.
-        </p>
-      </div>
-      <div className="grid grid-cols-3 gap-10 ">
+      <SectionHeading
+        heading="Why Choose TrustCommerce?"
+        subHeading=" Built with Trustless Work integration, our template provides
+          everything you need for secure, escrow-protected e-commerce."
+      />
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-10 ">
         <WhyChoseCard
           icon={<Shield size={40} className="text-primary" />}
           text="Blockchain-powered escrow ensures secure
