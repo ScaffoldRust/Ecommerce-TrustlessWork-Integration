@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import HeroSection from "@/components/home/hero-section";
 import WhyChose from "@/components/home/why-choose";
+import HowItWorks from "@/components/home/how-it-works";
 
 const OldLayout = () => {
   return (
@@ -58,6 +59,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <WhyChose />
+      <HowItWorks />
       <CTASection />
     </div>
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
