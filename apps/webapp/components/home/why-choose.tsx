@@ -12,7 +12,7 @@ import SectionHeading from "../Common/SectionHeading";
 
 const WhyChose = () => {
   return (
-    <div className="p-20">
+    <div className="p-10 sm:p-20">
       <SectionHeading
         heading="Why Choose TrustCommerce?"
         subHeading=" Built with Trustless Work integration, our template provides

@@ -45,7 +45,7 @@ milestones are met.`,
     },
   ];
   return (
-    <div className="p-20 bg-[#F9FAFB]">
+    <div className="p-10 sm:p-20 bg-[#F9FAFB]">
       <SectionHeading
         heading="How It Works"
         subHeading="Simple, secure, and transparent. Our escrow process protects both buyers and

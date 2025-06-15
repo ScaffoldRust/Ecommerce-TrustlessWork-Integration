@@ -1,26 +1,12 @@
 import Link from "next/link";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-} from "@/components/ui/dropdown-menu";
+
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Toggle } from "@/components/ui/toggle";
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
-import {
-  CircleHelp,
-  House,
-  Info,
-  MenuIcon,
-  MoonIcon,
-  Search,
-  ShoppingBag,
-} from "lucide-react";
+import { CircleHelp, House, Info, MenuIcon, ShoppingBag } from "lucide-react";
 import Logo from "@/app/images/logo.png";
 import Image from "next/image";
 
-export default function Component() {
+export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white dark:border-gray-800 dark:bg-gray-950">
       <div className="flex h-16  items-center justify-between px-4 md:px-6">

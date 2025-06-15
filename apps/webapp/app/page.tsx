@@ -5,6 +5,7 @@ import Link from "next/link";
 import HeroSection from "@/components/home/hero-section";
 import WhyChose from "@/components/home/why-choose";
 import HowItWorks from "@/components/home/how-it-works";
+import Footer from "@/components/ui/footer";
 
 const OldLayout = () => {
   return (
@@ -61,6 +62,7 @@ export default function Home() {
       <WhyChose />
       <HowItWorks />
       <CTASection />
+      <Footer/>
     </div>
     // <main className="flex min-h-screen flex-col items-center justify-between p-24">
 
