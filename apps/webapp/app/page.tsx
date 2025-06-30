@@ -12,7 +12,7 @@ export default function Home() {
 
         <p className="leading-7 [&:not(:first-child)]:mt-6 text-center mb-8">
           A modern e-commerce template powered by ScaffoldRust, featuring
-          seamless integration with TrustlessWork's blockchain-powered
+          seamless integration with TrustlessWork&apos;s blockchain-powered
           Escrow-as-a-Service platform.
         </p>
 
