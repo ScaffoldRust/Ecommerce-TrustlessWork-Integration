@@ -1,4 +1,5 @@
 import type React from "react";
+
 import {
   ShoppingCart,
   FileText,
@@ -83,39 +84,63 @@ export default function EscrowStepsGrid({
   steps = escrowSteps,
   className = "",
 }: EscrowStepsGridProps) {
+  // Steps that should have gray circular backgrounds for contrast
+  const grayBackgroundSteps = [
+    "Funds Secured",
+    "Seller Delivers",
+    "Automatic Release",
+  ];
+
   return (
     <div className={`w-full ${className}`}>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-        {steps.map((step, index) => (
-          <div
-            key={index}
-            className={`
-              ${step.colorScheme}
-              border rounded-xl p-6 
-              transition-all duration-300 ease-in-out
-              hover:shadow-lg hover:scale-105 hover:-translate-y-1
-              cursor-default
-              group
-            `}
-          >
-            <div className="flex flex-col items-center text-center space-y-4">
-              {/* Icon */}
-              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/50 group-hover:bg-white/80 transition-colors duration-300">
-                {step.icon}
+        {steps.map((step, index) => {
+          const shouldHaveGrayBackground = grayBackgroundSteps.includes(
+            step.title
+          );
+
+          return (
+            <div
+              key={index}
+              className={`
+                ${step.colorScheme}
+                border-2 rounded-xl p-6 
+                shadow-md
+                transition-all duration-300 ease-in-out
+                hover:shadow-xl hover:scale-105 hover:-translate-y-1
+                cursor-default
+                group
+              `}
+            >
+              <div className="flex flex-col items-center text-center space-y-4">
+                {/* Icon */}
+                <div
+                  className={`
+                  flex items-center justify-center w-16 h-16 rounded-full 
+                  transition-colors duration-300
+                  ${
+                    shouldHaveGrayBackground
+                      ? "bg-gray-200/70 group-hover:bg-gray-200"
+                      : "bg-white/50 group-hover:bg-white/80"
+                  }
+                `}
+                >
+                  {step.icon}
+                </div>
+
+                {/* Title */}
+                <h3 className="text-lg font-semibold text-gray-900 leading-tight">
+                  {step.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {step.description}
+                </p>
               </div>
-
-              {/* Title */}
-              <h3 className="text-lg font-semibold text-gray-900 leading-tight">
-                {step.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {step.description}
-              </p>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
