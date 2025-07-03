@@ -44,7 +44,7 @@ export const AboutTimeline = () => {
 
       <div className="relative w-full max-w-4xl mx-auto">
         {/* Vertical line - desktop only */}
-        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 transform -translate-x-1/2" />
+        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-[#BFDBFE] transform -translate-x-1/2" />
 
         <div className="space-y-12 md:space-y-16">
           {TIMELINE.map((item, idx) => {
@@ -58,9 +58,9 @@ export const AboutTimeline = () => {
                   <div className="w-1/2 pr-8">
                     {isLeft && (
                       <div className="text-right">
-                        <Card className="inline-block max-w-sm shadow-sm border border-gray-100">
+                        <Card className="inline-block max-w-sm shadow-lg border border-gray-100">
                           <CardContent className="p-6">
-                            <span className="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-medium mb-3">
+                            <span className="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-extrabold mb-3">
                               {item.year}
                             </span>
                             <h3 className="font-semibold text-lg text-gray-900 mb-2">
@@ -77,16 +77,16 @@ export const AboutTimeline = () => {
 
                   {/* Center dot */}
                   <div className="relative z-10 flex items-center justify-center">
-                    <div className="w-3 h-3 bg-blue-600 rounded-full border-4 border-white shadow-sm" />
+                    <div className="w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-sm" />
                   </div>
 
                   {/* Right side content */}
                   <div className="w-1/2 pl-8">
                     {!isLeft && (
                       <div className="text-left">
-                        <Card className="inline-block max-w-sm shadow-sm border border-gray-100">
+                        <Card className="inline-block max-w-sm shadow-lg border border-gray-100">
                           <CardContent className="p-6">
-                            <span className="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-medium mb-3">
+                            <span className="inline-block px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-extrabold mb-3">
                               {item.year}
                             </span>
                             <h3 className="font-semibold text-lg text-gray-900 mb-2">
