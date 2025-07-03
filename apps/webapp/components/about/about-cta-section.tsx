@@ -13,14 +13,14 @@ export const AboutCTASection = () => {
       </p>
       <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center">
         <Button
-          className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-6 py-2 text-base font-semibold flex items-center justify-center"
+          className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white px-8 py-2 h-11 text-base flex items-center justify-center rounded-xl"
           aria-label="Explore Templates"
         >
           Explore Templates
         </Button>
         <Button
           variant="outline"
-          className="bg-white border border-gray-200 text-gray-900 px-6 py-2 text-base font-semibold flex items-center justify-center"
+          className="bg-white border border-gray-200 text-gray-900 px-8 py-2 h-11 text-base flex items-center justify-center rounded-xl"
           aria-label="Contact Us"
         >
           Contact Us
