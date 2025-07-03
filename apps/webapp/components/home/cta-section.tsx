@@ -5,13 +5,13 @@ import { ArrowRight, GithubIcon } from "lucide-react";
 
 export default function CtaSection() {
   return (
-    <section className="relative flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 px-4 py-16">
+    <section className="relative flex items-center justify-center bg-[#2563EB] px-8 py-16">
       {/* Background overlay for better text contrast */}
       <div className="absolute inset-0 bg-blue-900/20"></div>
 
-      <div className="relative z-10 max-w-5xl mx-auto text-center space-y-2">
+      <div className="relative w-full z-10 mx-auto text-center space-y-2">
         {/* Main Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-[36px] font-bold text-white leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-[36px] font-bold mt-2 text-white leading-tight">
           Ready to Launch Your Secure E-commerce Platform?
         </h1>
 
@@ -22,10 +22,10 @@ export default function CtaSection() {
         </p>
 
         {/* Call-to-Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 pb-10">
           <Button
             size="lg"
-            className="bg-white text-black hover:bg-blue-50 px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto"
+            className="bg-[#F1F5F9] text-black hover:bg-blue-50 px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 w-full sm:w-auto"
           >
             Start Shopping
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -34,7 +34,7 @@ export default function CtaSection() {
           <Button
             variant="outline"
             size="lg"
-            className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-semibold px-8 py-4 text-lg rounded-lg backdrop-blur-sm transition-all duration-200 w-full sm:w-auto bg-transparent"
+            className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-medium px-8 py-4 text-lg rounded-lg backdrop-blur-sm transition-all duration-200 w-full sm:w-auto bg-[#FFFFFF1A]"
           >
             <GithubIcon className="mr-2 h-5 w-5" />
             View Template
@@ -42,8 +42,8 @@ export default function CtaSection() {
         </div>
 
         {/* Footer Text */}
-        <div className="pt-16 md:pt-24">
-          <p className="text-blue-200 text-sm md:text-base">
+        <div className="pt-10 w-full border-t border-[#3B82F6]">
+          <p className="text-[#DBEAFE] text-sm md:text-base">
             Powered by{" "}
             <span className="font-semibold text-white">ScaffoldRust</span>
             {" • "}
