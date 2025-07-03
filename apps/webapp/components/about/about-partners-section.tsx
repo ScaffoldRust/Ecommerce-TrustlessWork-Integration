@@ -17,7 +17,7 @@ type Partner = {
 
 const partners: Partner[] = [
   {
-    icon: <Code className="w-6 h-6 text-blue-600" />,
+    icon: <Code className="w-6 h-6 text-white" />,
     name: "ScaffoldRust",
     description:
       "Our development team specializes in creating production-ready templates and tools for modern web applications with blockchain integration.",
@@ -28,7 +28,7 @@ const partners: Partner[] = [
     },
   },
   {
-    icon: <Shield className="w-6 h-6 text-blue-600" />,
+    icon: <Shield className="w-6 h-6 text-white" />,
     name: "Trustless Work",
     description:
       "The blockchain-powered Escrow-as-a-Service platform that makes secure, milestone-based payments possible with zero custodians.",
@@ -56,7 +56,7 @@ export default function AboutPartnersSection() {
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 hover:scale-105"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 min-h-[300px] hover:bg-white/15 transition-all duration-300 hover:scale-105"
               role="article"
               aria-labelledby={`partner-name-${index}`}
             >
@@ -114,7 +114,7 @@ export default function AboutPartnersSection() {
                   partner.ctaLabel && (
                     <Button
                       variant="outline"
-                      className="bg-transparent border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-200"
+                      className="bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-200"
                       asChild
                     >
                       <a href={partner.ctaLink}>{partner.ctaLabel}</a>
