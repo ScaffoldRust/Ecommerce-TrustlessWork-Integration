@@ -6,8 +6,8 @@ import {Zap, Shield, Globe, DollarSign, ArrowRight} from "lucide-react"
 export default function Hero() {
   return (
 
-    <section className="w-full xl:h-screen max-lg:h-full pt-20 bg-[#EFF6FF] gap-7">
-        <div className="max-w-[56.125rem] mt-16 max-lg:mt-0 xl:h-[27.75rem] mx-auto">
+    <section className="w-full xl:h-screen max-lg:h-full pt-20 pb-8 bg-[#EFF6FF]">
+        <div className="max-w-[56.125rem] my-16 max-lg:mt-0 xl:h-[27.75rem] mx-auto">
             <div className="w-80 h-9 gap-2 pl-3 py-2 rounded-full bg-[#DBEAFE] mx-auto flex">
                     < Shield color="#2563EB" size={16}/>
                 <h4 className="w-[16.5rem] h-5 font-[inter] font-medium text-sm leading-5 track-[0%] align-middle text-[#1E40AF]">Blockchain-Powered Escrow Protection</h4>{/* left: 288.21px; */}
@@ -37,7 +37,7 @@ export default function Hero() {
                 </Link>
             </div>
             {/*  */}
-            <div className="max-w-[768px] mx-auto my-12 flex max-md:flex-wrap justify-evenly gap-6">
+            <div className="max-w-[768px] mx-auto mt-11 flex max-md:flex-wrap justify-evenly gap-6">
                 <div className="flex flex-col max-md:w-5/12 text-center justify-center align-middle">
                     <div className="mx-auto mb-2">
                       <Zap color="#2563EB" size={32}/>
