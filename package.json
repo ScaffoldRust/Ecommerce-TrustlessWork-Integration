@@ -10,5 +10,8 @@
 	},
 	"scripts": {
 		"format-and-lint:fix": "biome check . --write"
+	},
+	"dependencies": {
+		"@creit.tech/stellar-wallets-kit": "^1.7.5"
 	}
 }
