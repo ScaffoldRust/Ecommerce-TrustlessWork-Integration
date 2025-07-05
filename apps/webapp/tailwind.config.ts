@@ -69,6 +69,7 @@ export default {
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
+
   safelist: [
     "text-blue-600",
     "text-green-600",

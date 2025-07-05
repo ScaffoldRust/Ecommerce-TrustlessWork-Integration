@@ -1,14 +1,14 @@
 {
-	"name": "ecommerce-trustlesswork-integration",
-	"module": "index.ts",
-	"type": "module",
-	"devDependencies": {
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	},
-	"scripts": {
-		"format-and-lint:fix": "biome check . --write"
-	}
+  "name": "ecommerce-trustlesswork-integration",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "format-and-lint:fix": "biome check . --write"
+  }
 }
