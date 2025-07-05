@@ -8,8 +8,9 @@ export default function About() {
     <>
       <AboutHero />
       <AboutCTASection />
-      <AboutTimeline />
       <MissionVision />
+      <AboutTimeline />
+
     </>
   );
 }
