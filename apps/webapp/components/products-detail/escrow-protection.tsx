@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Card } from "../ui/card";
 import { Button } from "../ui/button";
-import { ShieldCheck, Info, Wallet, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Wallet } from "lucide-react";
 
 export type Milestone = {
   id: number;
@@ -12,17 +12,16 @@ export type Milestone = {
   amount: number;
 };
 
-export type EscrowProps = {
-  total: number;
-  escrowFee: number;
-  milestones: Milestone[];
-};
+export function EscrowProtection() {
+  // Milestone and payment data now internal
+  const milestones: Milestone[] = [
+    { id: 1, title: 'Order confirmation', percentage: 20, amount: 59.99 },
+    { id: 2, title: 'Item shipped', percentage: 30, amount: 89.99 },
+    { id: 3, title: 'Item delivered', percentage: 50, amount: 149.99 },
+  ];
+  const total = 299.99;
+  const escrowFee = 2.99;
 
-export function EscrowProtection({
-  total,
-  escrowFee,
-  milestones,
-}: EscrowProps) {
   // Form state
   const [wallet, setWallet] = useState("");
   const [instructions, setInstructions] = useState("");
@@ -95,8 +94,8 @@ export function EscrowProtection({
         </ul>
         <hr className="border-t border-gray-200 mb-4" />
         <div className="flex justify-between items-center mt-2">
-          <span className="font-semibold text-lg md:text-xl">Total Amount</span>
-          <span className="font-bold text-2xl md:text-3xl tracking-tight">
+        <span className="font-semibold text-base">Total Amount</span>
+        <span className="font-bold text-xl tracking-tight">
             ${total.toFixed(2)}
           </span>
         </div>
