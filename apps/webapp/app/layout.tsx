@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { Footer } from '../components/ui/footer'
 import { Header } from "../components/ui/header"
 import { TrustlessWorkEscrowProvider } from "../lib/trustlesswork-provider"
 
@@ -23,6 +24,9 @@ export default function RootLayout({
 				<TrustlessWorkEscrowProvider>
 					<Header />
 					{children}
+        <main className="min-h-screen">
+				</main>
+				<Footer />
 				</TrustlessWorkEscrowProvider>
 			</body>
 		</html>
