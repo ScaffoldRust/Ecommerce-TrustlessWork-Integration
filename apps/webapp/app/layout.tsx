@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { Footer } from '../components/ui/footer'
+import { Header } from "../components/ui/header"
+import { TrustlessWorkEscrowProvider } from "../lib/trustlesswork-provider"
 import { WalletProvider } from '@/providers/wallet-provider'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,11 +21,17 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
+            <WalletProvider>
 			<body className={inter.className}>
-				<WalletProvider>
+				<TrustlessWorkEscrowProvider>
+					<Header />
 					{children}
-				</WalletProvider>
+        <main className="min-h-screen">
+				</main>
+				<Footer />
+				</TrustlessWorkEscrowProvider>
 			</body>
+            </WalletProvider>
 		</html>
 	)
 }
