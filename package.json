@@ -10,5 +10,8 @@
 	},
 	"scripts": {
 		"format-and-lint:fix": "biome check . --write"
+	},
+	"dependencies": {
+		"@trustless-work/escrow": "^2.0.0"
 	}
 }
