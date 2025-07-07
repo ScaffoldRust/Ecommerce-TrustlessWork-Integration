@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { Shield, Home, ShoppingBag, HelpCircle, Info } from "lucide-react"
+import { WalletConnect } from "@/components/wallet/wallet-connect"
 
 function Header() {
   return (
@@ -37,9 +38,7 @@ function Header() {
         </ul>
         {/* Actions */}
         <div className="flex items-center gap-3">
-          <Link href="/signin" className="px-4 py-2 rounded-md border border-gray-200 text-gray-900 bg-white hover:bg-gray-100 transition-colors font-medium">
-            Sign In
-          </Link>
+          <WalletConnect variant="outline" size="default" />
           <Link href="/get-started" className="px-4 py-2 rounded-md bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors">
             Get Started
           </Link>
