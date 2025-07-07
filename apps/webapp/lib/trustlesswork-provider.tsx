@@ -1,4 +1,4 @@
-
+'use client'
 import { TrustlessWorkConfig } from '@trustless-work/escrow';
 
 export function TrustlessWorkEscrowProvider({ children }: { children: React.ReactNode }) {
