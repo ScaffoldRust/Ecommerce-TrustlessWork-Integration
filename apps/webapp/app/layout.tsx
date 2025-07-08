@@ -3,8 +3,10 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Footer } from '../components/ui/footer'
-import { Header } from "../components/ui/header
-const inter = Inter({ subsets: ["latin"] });
+import { Header } from "../components/ui/header"
+import { TrustlessWorkEscrowProvider } from "../lib/trustlesswork-provider"
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "E-commerce Template with TrustlessWork",
@@ -21,11 +23,13 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<Header />
-				<main className="min-h-screen">
+				<TrustlessWorkEscrowProvider>
+					<Header />
 					{children}
+        <main className="min-h-screen">
 				</main>
 				<Footer />
+				</TrustlessWorkEscrowProvider>
 			</body>
 		</html>
 	)
