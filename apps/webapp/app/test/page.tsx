@@ -1,13 +1,13 @@
 "use client";
-import NetworkVisualization from "@/components/activity/network-visualization";
-import RecentActivity, {
-  type ActivityItem,
-} from "@/components/activity/recent-activity";
+// import NetworkVisualization from "@/components/activity/network-visualization";
+// import RecentActivity, {
+//   type ActivityItem,
+// } from "@/components/activity/recent-activity";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
 
 // Sample activity data
-const activityData: ActivityItem[] = [
+const activityData = [
   {
     id: "1",
     type: "treasury-transfer",
@@ -147,11 +147,11 @@ export default function Test() {
         <div className="lg:col-span-2">
           <Card className="m-3">
             <CardContent className="p-0">
-              <NetworkVisualization
+              {/* <NetworkVisualization
                 data={networkData}
                 color="#a855f7"
                 nodeSize={0.15}
-              />
+              /> */}
             </CardContent>
           </Card>
         </div>
