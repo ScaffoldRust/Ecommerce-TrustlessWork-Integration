@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import { Search, SlidersHorizontal } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,6 +20,7 @@ export function ProductsGrid({
 }: ProductsGridProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [showFilters, setShowFilters] = useState(false);
+  const router = useRouter();
 
   // Filter products based on search query
   const filteredProducts = useMemo(() => {
@@ -34,8 +36,12 @@ export function ProductsGrid({
   }, [products, searchQuery]);
 
   const handleProductSelect = (productId: string) => {
-    onProductSelect?.(productId);
-    console.log("Selected product:", productId);
+    if (onProductSelect) {
+      onProductSelect(productId);
+      return;
+    }
+
+    router.push(`/products/${productId}`);
   };
 
   return (
@@ -75,10 +81,10 @@ export function ProductsGrid({
             {filteredProducts.length > 0 ? (
               <>
                 Showing {filteredProducts.length} result
-                {filteredProducts.length !== 1 ? "s" : ""} for "{searchQuery}"
+                {filteredProducts.length !== 1 ? "s" : ""} for `{searchQuery}`
               </>
             ) : (
-              <>No products found for "{searchQuery}"</>
+              <>No products found for `{searchQuery}`</>
             )}
           </div>
         )}
